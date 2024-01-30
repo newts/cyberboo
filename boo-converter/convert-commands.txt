@@ -1,0 +1,20 @@
+  807  convert boo.gif ghost%d.png
+  808  convert 'ghost*.gif' -resize 64x128 smol%d.png
+  809  convert 'ghost*.png' -resize 64x128 smol%d.png
+  814  convert -append 'ghost*.png' boo.png
+  815  convert -append 'smol*.png' boo.png
+  816  ls *.png
+  819  convert boo.gif gpng%d.png
+  820  convert 'gpng*.png' -resize 64x128 smol%d.png
+  823  mogrify  -resize 64x128 gpng*.png
+  824  convert -append 'gpng*.png' boo.png
+  827  convert boo.gif boo%d.png
+  829  mogrify  -resize 64x128 boo?.png
+  831  convert boo.gif boo%d.png
+  834  mogrify  -resize 64x128 boo?.png
+  835  convert -append 'boo?.png' boo.png
+  836  convert +append 'boo?.png' boo.png
+  837  convert boo.png -monochrome boot.png
+  838  convert boo.png -monochrome -negate boot.png
+  839  convert boo.png -monochrome -negate -rotate 90 boot.png
+  840  history | grep png
